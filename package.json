@@ -1,0 +1,22 @@
+{
+  "name": "circleci-test",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "./test.sh",
+    "spellcheck": "mdspell '**/*.md' '!**/node_modules/**/*.md' -r -n -a"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanthai/circleci-test-repo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alanthai/circleci-test-repo/issues"
+  },
+  "homepage": "https://github.com/alanthai/circleci-test-repo#readme",
+  "devDependencies": {
+    "markdown-spellcheck": "^0.10.0"
+  }
+}
