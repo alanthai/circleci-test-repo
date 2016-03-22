@@ -2,7 +2,7 @@ require('shelljs/global');
 const request = require('request');
 
 const API_URL = 'https://api.github.com';
-const AUTH_TOKEN = 'c7dbdcc10e97e3b3dbbadd0d2f5ffe0ab3cce26d';
+const AUTH_TOKEN = '753777755c338eaa9d8f15f64b66e8f139b290b8';
 const COMMENTS_PATH = '/repos/alanthai/${repo}/commits/${sha}/comments';
 const REPO = 'circleci-test-repo';
 
