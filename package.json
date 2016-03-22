@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "node ./test.js",
+    "test": "node ./test",
     "spellcheck": "mdspell '**/*.md' '!**/node_modules/**/*.md' -r -n -a"
   },
   "repository": {
