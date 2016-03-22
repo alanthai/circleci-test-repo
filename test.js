@@ -2,7 +2,7 @@ require('shelljs/global');
 const request = require('request');
 
 const API_URL = 'https://api.github.com';
-const AUTH_TOKEN = '753777755c338eaa9d8f15f64b66e8f139b290b8';
+const AUTH_TOKEN = process.env.AUTH_TOKEN;
 const COMMENTS_PATH = '/repos/alanthai/${repo}/commits/${sha}/comments';
 const REPO = 'circleci-test-repo';
 
@@ -12,7 +12,8 @@ function spellcheck() {
   if (error.code) {
     postComment(error.output)
       .then(body => console.log('-----Pushed comment-----', body))
-      .then(null, err => {console.log('-----ERR-----', err)});
+      .then(null, err => {console.log('-----ERR-----', err)})
+      .then(() => console.log('ENV_VAR', AUTH_TOKEN));
   } else {
     console.log('No error');
   }
