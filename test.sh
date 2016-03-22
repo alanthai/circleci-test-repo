@@ -3,7 +3,9 @@
 ERROR="$(npm run spellcheck 2>&1 > /dev/null)"
 
 if [[ -z $ERROR ]]; then # no errors
-  echo "if happened"
+  echo "No errors"
 else # errors
-  echo "else happened"
+  echo "Errors"
 fi
+
+echo "$ERROR"
