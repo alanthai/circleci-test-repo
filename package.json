@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "./test.sh",
+    "test": "node ./test.js",
     "spellcheck": "mdspell '**/*.md' '!**/node_modules/**/*.md' -r -n -a"
   },
   "repository": {
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/alanthai/circleci-test-repo#readme",
   "devDependencies": {
-    "markdown-spellcheck": "^0.10.0"
+    "markdown-spellcheck": "^0.10.0",
+    "shelljs": "^0.6.0"
   }
 }
