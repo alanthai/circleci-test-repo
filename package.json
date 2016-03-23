@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "test": "node ./test",
-    "spellcheck": "mdspell '**/*.md' '!**/node_modules/**/*.md' -r -n -a"
+    "spellcheck": "mdspell '**/*.md' '!**/node_modules/**/*.md' -r -p -n -a"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/alanthai/circleci-test-repo#readme",
   "devDependencies": {
-    "markdown-spellcheck": "^0.10.0",
+    "markdown-spellcheck": "github:alanthai/node-markdown-spellcheck",
     "request": "^2.69.0",
     "shelljs": "^0.6.0"
   }
