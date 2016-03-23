@@ -9,7 +9,12 @@ const REPO = 'circleci-test-repo';
 spellcheck();
 
 function spellcheck() {
-  const spellerror = exec('npm run spellcheck');
+  const markdownFiles = exec('git diff HEAD HEAD^ --name-only').output
+    .split('\n')
+    .filter(file => file.endsWith('.md'));
+
+  const fileGlob = markdownFiles.map(file => `'${file}'`).join(' ');
+  const spellerror = exec(`mdspell ${fileGlob} -r -p -n -a`);
 
   if (spellerror.code) {
     postComment(spellerror.output)
